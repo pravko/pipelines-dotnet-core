@@ -7,34 +7,34 @@
         {
             "type": "Microsoft.Web/serverfarms",
             "apiVersion": "2016-09-01",
-            "name": "frankdemoplan",
+            "name": "jmfdemoplan",
             "location": "[resourceGroup().location]",
             "sku": {
                 "name": "F1",
                 "capacity": 1
             },
             "tags": {
-                "displayName": "frankdemoplan"
+                "displayName": "jmfdemoplan"
             },
             "properties": {
-                "name": "frankdemoplan"
+                "name": "jmfdemoplan"
             }
         },
         {
             "type": "Microsoft.Web/sites",
             "apiVersion": "2015-08-01",
-            "name": "frankdemo4243",
+            "name": "jmfdemo4243",
             "location": "[resourceGroup().location]",
             "tags": {
-                "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/frankdemoplan')]": "Resource",
-                "displayName": "frankdemo4243"
+                "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/jmfdemoplan')]": "Resource",
+                "displayName": "jmfdemo4243"
             },
             "dependsOn": [
-                "Microsoft.Web/serverfarms/frankdemoplan"
+                "Microsoft.Web/serverfarms/jmfdemoplan"
             ],
             "properties": {
-                "name": "frankdemo4243",
-                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms/', 'frankdemoplan')]"
+                "name": "jmfdemo4243",
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms/', 'jmfdemoplan')]"
             }
         }
     ],
