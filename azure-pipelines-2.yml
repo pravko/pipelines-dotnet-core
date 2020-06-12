@@ -20,7 +20,7 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: True
-    arguments: --configuration $(buildConfiguration) --output $(Build.ArtifactStaging)
+    arguments: --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
   displayName: 'publish artifacts'
