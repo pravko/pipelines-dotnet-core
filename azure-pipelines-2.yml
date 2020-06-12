@@ -16,10 +16,12 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 - task: DotNetCoreCLI@2
+  displayName: 'dotnet publish $(buildConfiguration)'
   inputs:
-    command: 'build'
+    command: 'publish'
+    publishWebProjects: True
+    arguments: --configuration $(buildConfiguration) --output $(Build.ArtifactStaging)
+
 - task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+  displayName: 'publish artifacts'
+  
