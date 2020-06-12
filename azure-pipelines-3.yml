@@ -27,5 +27,5 @@ steps:
   displayName: 'publish artifacts'
   inputs:
     pathToPublish: '$(Build.ArtifactStagingDirectory)'
-    
+    ArtifactName: jmfdrop
   
