@@ -23,17 +23,17 @@
         {
             "type": "Microsoft.Web/sites",
             "apiVersion": "2015-08-01",
-            "name": "jmfdemo4243",
+            "name": "jmfdemo100",
             "location": "[resourceGroup().location]",
             "tags": {
                 "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/jmfdemoplan')]": "Resource",
-                "displayName": "jmfdemo4243"
+                "displayName": "jmfdemo100"
             },
             "dependsOn": [
                 "Microsoft.Web/serverfarms/jmfdemoplan"
             ],
             "properties": {
-                "name": "jmfdemo4243",
+                "name": "jmfdemo100",
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms/', 'jmfdemoplan')]"
             }
         }
